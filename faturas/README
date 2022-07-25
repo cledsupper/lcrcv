@@ -1,0 +1,10 @@
+Este é um exemplo de comprovante assinado.
+
+Ao abrir o arquivo com um editor de textos simples (Bloco de Notas; Gedit; VSCode), pode-se constatar que o arquivo tem início com uma assinatura PGP, como se fosse um arquivo .txt qualquer. Ainda assim, é possível abrir o arquivo PDF com, por exemplo, o Adobe Acrobat e o Google Drive, ou ainda o navegador Chrome.
+
+Para evitar possíveis distorções no documento (mencionado em fóruns pela internet), é necessário, além do --clear-sign, o argumento --not-dash-escaped na linha de comando gpg, conforme o assinador.sh.
+
+Verifique a validade da assinatura importando no GnuPG, a chave pública disponível para download no próprio documento. Após importar, atualize o nível de confiança na chave e execute o seguinte comando para verificar a integridade do arquivo:
+$ gpg --verify 'Fatura - 2022-07-25 1024.signed.pdf'
+
+A chave pública deste arquivo é exatamente a mesma linkada no meu perfil aqui no GitHub.
