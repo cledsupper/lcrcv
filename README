@@ -1,0 +1,37 @@
+LCRCV - 2022
+============
+
+AVISO: antes de qualquer teste com botões, leia a seção ORIENTAÇÕES DE USO.
+
+Esta é uma planilha em um formato aberto e equiparável ao Excel, que é relativamente simples para controle de estoque e venda para pequenos comerciantes.
+
+Com ela, é possível adicionar produtos e suas quantidades, e gerar ordens de venda. Além disso, é possível gerar comprovantes das ordens de compra/venda, e inclusive dos pagamentos. Há vários botões elegantes que facilitam o gerenciamento de tudo isso.
+
+
+CONCEITO DE COMPROVANTES ASSINADOS
+
+Por ser uma planilha conceitual, em vez de uma assinatura com certificado digital, utiliza-se uma assinatura com GnuPG (ou PGP) que funciona com os arquivos PDF desta ppanilha sem quaisquer distorções nos documentos.
+
+Nesse esquema de assinatura, o software GnuPG deve ser instalado na máquina acompanhado de uma chave PGP privada que será utilizada para a assinatura das "faturas".
+
+A ideia dessa implementação, é que tanto o cliente como o vendedor possuam em seus dispositivos (celular e termjnal de vendas, respectivamente), um comprovante resistente a falsificações.
+
+Caso ocorram erros na planilha por parte do caixa, o cliente pode provar que fez o pedido ou pagou a conta. Assim como é tecnicamente impossível, da parte do cliente, sem cumplicidade do vendedor, fraudar um comprovante de pagamento.
+
+
+ORIENTAÇÕES DE USO
+
+Instale a versão mais recente do LibreOffice antes de testar a planilha!
+
+Por ser uma planilha dispondo de macros simples, HÁ FALHAS: não se pode apagar os primeiros dois registros sem causar erros de formatação ou, bem pior, de referência nas fórmulas (incorrigível de forma automática!). Para os registros presentes, SOMENTE limpe (tecla DEL) os campos preenchidos, substituindo-os por outros, NESTA ORDEM:
+1. Altere os dados dos Produtos;
+2. Altere os dados dos Clientes;
+3. Altere os dados das ORDENS de compra e venda;
+4. Atualize os ítens das respectivas ordens no Agregador.
+
+Reafirmando o básico: você deve manter pelo menos DOIS (2) registros em todas as planilhas!
+
+Para gerar o comprovante, altere o número da ordem nele, clique no botão de atualizar e, por último, o botão da impressora para gerar o arquivo PDF (SEM ASSINATURA).
+
+
+by cleds.upper
